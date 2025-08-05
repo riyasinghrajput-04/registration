@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Registration</title>
+  <style>
+  body {
+    background: linear-gradient(to right, #e82d2d, #f71e83);
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .form-container {
+    background: #ffffff;
+    padding: 60px 50px;     /* Increased padding */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    width: 480px;           /* Wider width */
+  }
+
+  .form-container h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 28px;        /* Slightly bigger font */
+  }
+
+  input, select, button {
+    width: 100%;
+    padding: 14px 18px;     /* Bigger padding */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;        /* Bigger font */
+  }
+
+  input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
+  button {
+    background-color: #2150d4;
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #459af4;
+  }
+</style>
+
+</head>
+<body>
+  <div class="form-container">
+    <h2>Registration form</h2>
+    <form action="registration.php" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <select name="role" required>
+        <option value="">-- Select Role --</option>
+        <option value="volunteer">Volunteer</option>
+        <option value="intern">Intern</option>
+      </select>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
